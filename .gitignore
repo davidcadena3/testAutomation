@@ -1,0 +1,5 @@
+/test-result/
+/build/
+/allure-results/
+/.gradle/
+/.idea/
