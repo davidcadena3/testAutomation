@@ -1,0 +1,7 @@
+selenium = new WebDriverBackedSelenium(driver, baseUrl)
+selenium.open("https://wasi.co/")
+selenium.click("link=INGRESAR")
+selenium.click("id=user")
+selenium.click("xpath=//div[@id='navigation']/div/div/div[2]/a")
+selenium.click("link=Salir")
+selenium.open("https://wasi.co/")

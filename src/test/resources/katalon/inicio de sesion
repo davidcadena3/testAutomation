@@ -1,0 +1,8 @@
+selenium.open("https://wasi.co/")
+selenium.click("link=INGRESAR")
+selenium.click("id=user")
+selenium.type("id=user", ("lord@wasitest.com").toString())
+selenium.click("id=password")
+selenium.type("id=password", "demo2346")
+selenium.click("id=login")
+selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='(Opcional)'])[1]/following::span[1]")
