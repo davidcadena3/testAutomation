@@ -12,9 +12,10 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.junit.jupiter.api.extension.RegisterExtension
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
+import org.slf4j.LoggerFactory
 
 @ExtendWith(ScreenShooterExtension::class)
-open class BaseTest(val url: String) {
+open class BaseTest() {
 
     companion object {
         @JvmField
@@ -33,7 +34,8 @@ open class BaseTest(val url: String) {
         }
     }
 
-    protected lateinit var driver: WebDriver
+    private lateinit var driver: WebDriver
+    val logger = LoggerFactory.getLogger("test")
 
 
     init {
@@ -45,7 +47,6 @@ open class BaseTest(val url: String) {
     @BeforeEach
     fun globalSetUp() {
         driver = ChromeDriver()
-        Selenide.open(url)
     }
 
     @AfterEach
